@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import each from 'lodash/each';
 import { navList, navmap } from './config';
 import { CSSTransitionGroup } from 'react-transition-group';
 import './style.css';

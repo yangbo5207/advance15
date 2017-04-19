@@ -1,0 +1,36 @@
+.advance-icon-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.advance-icon-wrap {
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.advance-icon-wrap:hover {
+    background-color: #49a9ee;
+    border: 1px solid #49a9ee;
+    color: #fff;
+}
+.advance-icon-wrap:hover .icon {
+    color: #fff;
+}
+
+
+.advance-pages-icon .icon {
+    font-size: 30px;
+}
+.advance-pages-icon .typename {
+    font-size: 14px;
+}

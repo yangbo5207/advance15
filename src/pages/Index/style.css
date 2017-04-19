@@ -50,7 +50,8 @@
 .page-enter {
   opacity: 0;
   transform: translateY(-40px);
-  transition: all 0.3s linear;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
 }
 
 .page-enter.page-enter-active {

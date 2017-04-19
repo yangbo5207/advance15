@@ -1,7 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
 import omit from 'lodash/omit';
-
 import './style.css';
 
 const defaultProps = {
@@ -9,8 +8,8 @@ const defaultProps = {
     spin: false
 }
 
-export default (props: defaultProps) => {
-    const {type, className, spin, title} = props;
+export default (props = defaultProps) => {
+    const {type, className, spin} = props;
     const iconCls = classNames({
         'tiger-icon': true,
         'tiger-icon-spin': !!spin || type === 'loading',
@@ -18,6 +17,6 @@ export default (props: defaultProps) => {
     }, className);
 
     return (
-        <i {...omit(props, ['type', 'spin'])} className={iconCls}>{title}</i>
+        <i {...omit(props, ['type', 'spin'])} className={iconCls} />
     )
 }

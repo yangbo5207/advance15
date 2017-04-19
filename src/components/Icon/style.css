@@ -1,3 +1,4 @@
+/* 从阿里的iconfont网站上引入图标字体 */
 @font-face {
   font-family: 'iconfont';  /* project id 276517 */
   src: url('//at.alicdn.com/t/font_4v5kw3yelcvxi529.eot');
@@ -12,39 +13,39 @@
     display: inline-block;
     text-align: center;
     vertical-align: baseline;
-    font-family: iconfont;
+    font-family: "iconfont";
     color: inherit;
 }
 
-.tiger-icon-loading:before { content: '\eee3'};
-.tiger-icon-favorite:before { content: '\e7ce'};
-.tiger-icon-skip:before { content: '\e718'};
-.tiger-icon-good:before { content: '\e717'};
-.tiger-icon-bad:before { content: '\e716'};
-.tiger-icon-map:before { content: '\e715'};
-.tiger-icon-dollar:before { content: '\e702'};
-.tiger-icon-attachment:before { content: '\e6c0'};
-.tiger-icon-calendar:before { content: '\e6bf'};
-.tiger-icon-warning:before { content: '\e6b6'};
-.tiger-icon-success:before { content: '\e6b1'};
-.tiger-icon-selected:before { content: '\e6ad'};
-.tiger-icon-search:before { content: '\e6ac'};
-.tiger-icon-refresh:before { content: '\e6aa'};
-.tiger-icon-arrowright:before { content: '\e6a7'};
-.tiger-icon-arrowleft:before { content: '\e697'};
-.tiger-icon-arrowup:before { content: '\e6a5'};
-.tiger-icon-arrowdown:before { content: '\e6a6'};
-.tiger-icon-infomation:before { content: '\e6a4'};
-.tiger-icon-help:before { content: '\e6a3'};
-.tiger-icon-document:before { content: '\e6a2'};
-.tiger-icon-folder:before { content: '\e6a1'};
-.tiger-icon-star:before { content: '\e6a0'};
-.tiger-icon-email:before { content: '\e69f'};
-.tiger-icon-edit:before { content: '\e69e'};
-.tiger-icon-delete:before { content: '\e69d'};
-.tiger-icon-close:before { content: '\e69a'};
-.tiger-icon-category:before { content: '\e699'};
-.tiger-icon-cart:before { content: '\e698'};
+.tiger-icon-loading:before { content: '\eee3'}
+.tiger-icon-favorite:before { content: '\e7ce'}
+.tiger-icon-skip:before { content: '\e718'}
+.tiger-icon-good:before { content: '\e717'}
+.tiger-icon-bad:before { content: '\e716'}
+.tiger-icon-map:before { content: '\e715'}
+.tiger-icon-dollar:before { content: '\e702'}
+.tiger-icon-attachment:before { content: '\e6c0'}
+.tiger-icon-calendar:before { content: '\e6bf'}
+.tiger-icon-warning:before { content: '\e6b6'}
+.tiger-icon-success:before { content: '\e6b1'}
+.tiger-icon-selected:before { content: '\e6ad'}
+.tiger-icon-search:before { content: '\e6ac'}
+.tiger-icon-refresh:before { content: '\e6aa'}
+.tiger-icon-arrowright:before { content: '\e6a7'}
+.tiger-icon-arrowleft:before { content: '\e697'}
+.tiger-icon-arrowup:before { content: '\e6a5'}
+.tiger-icon-arrowdown:before { content: '\e6a6'}
+.tiger-icon-infomation:before { content: '\e6a4'}
+.tiger-icon-help:before { content: '\e6a3'}
+.tiger-icon-document:before { content: '\e6a2'}
+.tiger-icon-folder:before { content: '\e6a1'}
+.tiger-icon-star:before { content: '\e6a0'}
+.tiger-icon-email:before { content: '\e69f'}
+.tiger-icon-edit:before { content: '\e69e'}
+.tiger-icon-delete:before { content: '\e69d'}
+.tiger-icon-close:before { content: '\e69a'}
+.tiger-icon-category:before { content: '\e699'}
+.tiger-icon-cart:before { content: '\e698'}
 
 .tiger-icon-spin {
     animation-name: tiger-rotate;
