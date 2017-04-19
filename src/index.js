@@ -1,8 +1,27 @@
 import React from 'react';
 import { render } from 'react-dom';
-import App from './pages/App';
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
+
+import Index from './pages/Index';
+import Icons from './pages/Icons';
+import Buttons from './pages/Buttons';
+import Images from './pages/Images';
+import Comments from './pages/Comments';
+import Animates from './pages/Animates';
+
 import './index.css';
 
 const rootElement = document.getElementById('root');
 
-render(<App />, rootElement);
+render((
+    <Router history={ hashHistory }>
+        <Route path="/" component={ Index }>
+            <IndexRoute component={ Icons } />
+            <Route path="/icon" component={ Icons } />
+            <Route path="/button" component={ Buttons } />
+            <Route path="/image" component={ Images } />
+            <Route path="/comment" component={ Comments } />
+            <Route path="/animate" component={ Animates } />
+        </Route>
+    </Router>
+), rootElement);

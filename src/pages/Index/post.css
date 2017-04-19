@@ -1,0 +1,60 @@
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    color: #000;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: normal;
+    color: #000;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3, h4, h5, h6 {
+    font-size: 16px;
+}
+
+pre {
+    background-color: #f7f7f7;
+    padding: 15px;
+    margin: 16px 0;
+}
+
+code {
+    font-family: 'Source Code Pro';
+    font-size: 14px;
+    color: rgb(233, 63, 114);
+    padding: 5px;
+}
+
+.code-box {
+    border: 1px solid #d9d9d9;
+    margin: 16px 0;
+    padding: 16px 0;
+}
+.code-box-item {
+    border-top: 1px solid #e9e9e9;
+    padding: 20px;
+    position: relative;
+}
+
+.show-box-title {
+    position: absolute;
+    padding: 0 5px;
+    left: 0;
+    top: -13px;
+    background-color: #fff;
+}
+
+.code-box p {
+    color: #919191;
+}
+
+.show-code code {
+    padding: 0;
+    display: block;
+    line-height: 1.8;
+}

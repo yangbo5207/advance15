@@ -1,0 +1,69 @@
+.advance-main {
+    width: 1000px;
+    margin: 40px auto;
+    border-radius: 4px;
+    padding: 30px 0;
+
+    display: flex;
+}
+
+.advance-main nav {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    transition-duration: 0.3s;
+}
+
+.advance-main nav a {
+    height: 40px;
+    line-height: 40px;
+    color: #5a5a5a;
+    padding-left: 20px;
+    transition-duration: 0.3s;
+    border-right: 1px solid #e9e9e9;
+}
+
+.advance-main nav a:hover {
+    color: #108ee9;
+}
+
+.advance-main nav a.active {
+    background-color: #ecf6fd;
+    border-right: 1px solid #7ec2f3;
+    color: #108ee9;
+}
+
+.advance-pages {
+    flex: 1;
+    position: relative;
+}
+.advance-pages-item {
+    position: absolute;
+    padding: 0 30px 30px;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+/* 用于路由过渡效果 */
+.page-enter {
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: all 0.3s linear;
+}
+
+.page-enter.page-enter-active {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.page-leave {
+  opacity: 1;
+  transition: all 0.3s linear;
+}
+
+.page-leave.page-leave-active {
+  opacity: 0;
+  transform: translateY(40px);
+}

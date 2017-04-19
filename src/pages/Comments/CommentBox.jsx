@@ -22,7 +22,7 @@ export default class CommentBox extends Component {
 
     render() {
         return (
-            <div className="commentBox">
+            <div className="advance-pages-item commentBox">
                 <h1>Comments</h1>
                 <CommentList data={this.state.data} />
                 <CommentForm onCommentSubmit={this.handleCommentSubmit} />
