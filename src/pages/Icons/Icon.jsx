@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from '../../components/Icon';
+import Switch from '../../components/Switch';
 import { iconTypes } from './config';
 
 import './style.css';
@@ -63,17 +64,19 @@ export default function() {
             </section>
 
             <h2>目前支持的图标列表</h2>
-                <p>指定不同的<code>type</code>值即可得到不同的图标。</p>
-                <ul className="advance-icon-list">
-                    {iconTypes.map((type, i) => {
-                        return (
-                            <li className="advance-icon-wrap" key={i}>
-                                <Icon type={type} className="icon" />
-                                <div className="typename">{type}</div>
-                            </li>
-                        )
-                    })}
-                </ul>
+            <p>指定不同的<code>type</code>值即可得到不同的图标。</p>
+            <ul className="advance-icon-list">
+                {iconTypes.map((type, i) => {
+                    return (
+                        <li className="advance-icon-wrap" key={i}>
+                            <Icon type={type} className="icon" />
+                            <div className="typename">{type}</div>
+                        </li>
+                    )
+                })}
+            </ul>
+
+            <Switch nextType="button" />
         </div>
     )
 }

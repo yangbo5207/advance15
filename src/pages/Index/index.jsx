@@ -13,6 +13,18 @@ export default class Index extends Component {
         index
     })
 
+    componentWillReceiveProps(nextProps) {
+        const nav = nextProps.location.pathname.slice(1);
+        navList.map((item, i) => {
+            if (nav === item) {
+                this.setState({
+                    index: i
+                })
+            }
+            return item;
+        })
+    }
+
     render() {
         const { index } = this.state;
 

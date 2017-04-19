@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import CommentList from './CommentList';
 import CommentForm from './CommentForm';
 
+import Switch from '../../components/Switch';
+
 export default class CommentBox extends Component {
     state = {
         data: [
@@ -26,6 +28,8 @@ export default class CommentBox extends Component {
                 <h1>Comments</h1>
                 <CommentList data={this.state.data} />
                 <CommentForm onCommentSubmit={this.handleCommentSubmit} />
+
+                <Switch nextType="animate" prevType="image" />
             </div>
         )
     }
