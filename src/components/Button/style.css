@@ -27,19 +27,19 @@
     &:after {
         border: 0 solid #d9d9d9;
     }
+}
 
-    i + span {
-        margin-left: 8px;
-    }
+.tiger-button i + span {
+    margin-left: 8px;
+}
 
-    span + i {
-        margin-left: 8px;
-    }
+.tiger-button span + i {
+    margin-left: 8px;
 }
 
 .tiger-button-primary {
     background-color: #108ee9;
-    color: $white;
+    color: #fff;
     border: 1px solid #108ee9;
     &:after {
         border: 0 solid #108ee9;
@@ -56,7 +56,7 @@
 
 .tiger-button-danger {
     background-color: #f04134;
-    color: $white;
+    color: #fff;
     border: 1px solid #f04134;
 }
 .tiger-button-danger:after {
