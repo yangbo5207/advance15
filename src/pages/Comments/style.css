@@ -1,0 +1,42 @@
+.commentList {
+    border: 1px solid #d9d9d9;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.commentList .comment {
+    border-bottom: 1px solid #d9d9d9;
+    margin-bottom: 20px;
+}
+
+.commentList .comment:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+}
+
+.commentList .commentAuthor {
+    font-size: 14px;
+    line-height: 1.2;
+    color: #666;
+}
+
+.commentList span {
+    color: #333;
+    font-size: 16px;
+}
+
+.commentForm {
+    margin-top: 40px;
+}
+
+.commentForm input {
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    height: 30px;
+    margin: 0 20px;
+    text-indent: 20px;
+}
+
+.commentForm input[type=text] {
+    min-width: 200px;
+}

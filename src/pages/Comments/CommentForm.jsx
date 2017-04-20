@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from '../../components/Button';
 
 class CommentForm extends Component {
     state = {
@@ -40,7 +41,7 @@ class CommentForm extends Component {
             <form className="commentForm" onSubmit={ this.handleSubmit }>
                 <input type="text" placeholder="Your name" value={author} onChange={this.handleAuthorChange} />
                 <input type="text" placeholder="say something..." value={text} onChange={this.handleTextChange} />
-                <input type="submit" value="POST" />
+                <Button type="primary" htmlType="submit" context="POST" />
             </form>
         )
     }

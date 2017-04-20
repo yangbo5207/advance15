@@ -7,7 +7,6 @@ import Icons from './pages/Icons';
 import Buttons from './pages/Buttons';
 import Images from './pages/Images';
 import Comments from './pages/Comments';
-import Animates from './pages/Animates';
 
 import './index.css';
 
@@ -21,7 +20,6 @@ render((
             <Route path="/button" component={ Buttons } />
             <Route path="/image" component={ Images } />
             <Route path="/comment" component={ Comments } />
-            <Route path="/animate" component={ Animates } />
         </Route>
     </Router>
 ), rootElement);
