@@ -16,7 +16,7 @@ export const setImageMode = (wrapElement, mode = 'scaleToFill') => {
     }).then(() => {
         const imgAspect = image.naturalHeight / image.naturalWidth;
         const wrapAspect = wrapElement.offsetHeight / wrapElement.offsetWidth;
-        
+
         switch (mode) {
             case 'aspectFit':
                 _mode = imgAspect >= 1 ? 'aspectFit-y' : 'aspectFit-x'
@@ -30,8 +30,6 @@ export const setImageMode = (wrapElement, mode = 'scaleToFill') => {
             default:
                 _mode = mode;
         }
-
-        console.log(_mode);
 
         return _mode;
     })
