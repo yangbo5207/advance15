@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
+import { setImageMode } from './utils';
 import './style.css';
 
 class Image extends Component {
@@ -11,7 +12,7 @@ class Image extends Component {
     componentDidMount() {
         const { mode, bindload, binderror } = this.props;
 
-        this.getMode(mode).then(mode => {
+        setImageMode(this.refs.wrap, mode).then(mode => {
             this.setState({
                 mode
             })
@@ -19,46 +20,6 @@ class Image extends Component {
         })
         .catch(err => {
              binderror && binderror();
-        })
-    }
-
-    getMode = mode => {
-        const { wrap, image } = this.refs;
-
-        return new Promise((resolve, reject) => {
-            if (image.complete) {
-                resolve();
-            } else {
-                image.onload = (event) => {
-                    resolve(event);
-                }
-                image.onerror = (err) => {
-                    reject(err)
-                }
-            }
-        }).then(() => {
-            let resultMode = mode;
-            const imgRate = image.naturalHeight / image.naturalWidth;
-            const wrapRate = wrap.offsetHeight / wrap.offsetWidth;
-            switch (mode) {
-                case 'aspectFit':
-                    resultMode = imgRate >= 1 ? 'aspectFit-y' : 'aspectFit-x';
-                    break;
-                case 'aspectFill':
-                    resultMode = imgRate >= 1 ? 'aspectFill-x' : 'aspectFill-y';
-                    break;
-                case 'wspectFill':
-                    resultMode = wrapRate > imgRate ? 'aspectFill-y' : 'aspectFill-x';
-                    break;
-                default:
-                    resultMode = mode;
-            }
-
-            if (!resultMode) {
-                resultMode = 'scaleToFill';
-            }
-
-            return resultMode;
         })
     }
 

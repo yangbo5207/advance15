@@ -1,40 +1,20 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+import { Link, withRouter } from 'react-router';
 import { navList, navmap } from './config';
 import { CSSTransitionGroup } from 'react-transition-group';
 import './style.css';
 
-export default class Index extends Component {
-    state = {
-        index: 0
-    }
-
-    onClick = index => this.setState({
-        index
-    })
-
-    componentWillReceiveProps(nextProps) {
-        const nav = nextProps.location.pathname.slice(1);
-        navList.map((item, i) => {
-            if (nav === item) {
-                this.setState({
-                    index: i
-                })
-            }
-            return item;
-        })
-    }
+class Index extends Component {
 
     render() {
-        const { index } = this.state;
-
         const { children, location } = this.props;
+        const cur = location.pathname.slice(1);
 
         return (
             <div className="advance-main">
                 <nav>
                     {navList.map((item, i) => (
-                        <Link to={`/${item}`} key={i} className={index === i ? 'active' : null} onClick={this.onClick.bind(null, i)}>
+                        <Link to={`/${item}`} key={i} className={cur === item ? 'active' : null}>
                             { navmap[item] }
                         </Link>
                     ))}
@@ -53,3 +33,5 @@ export default class Index extends Component {
         )
     }
 }
+
+export default withRouter(Index);
