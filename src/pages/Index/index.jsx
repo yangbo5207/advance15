@@ -9,6 +9,7 @@ class Index extends Component {
     render() {
         const { children, location } = this.props;
         const cur = location.pathname.slice(1);
+        console.log(this.props);
 
         return (
             <div className="advance-main">
